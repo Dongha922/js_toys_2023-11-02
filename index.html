@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>로또 번호 추첨기</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>로또 번호 추첨기</h1>
+    <h1>자기소개</h1>
+    <textarea class="form-control" rows="3" id="jasoseol">
+저는 인성 문제가 없습니다.</textarea
+    >
+    <span id="count">(0/200)</span>
     <script>
-        var lotto = [];
-        while (lotto.length < 6) {
-            var num = parseInt(Math.random() * 45 + 1);
-            if (lotto.indexOf(num) == -1) {
-                lotto.push(num);
-            }
-        }
-        //정렬
-        lotto.sort((a,b)=>a-b);
-        document.write("<div class='ball ball1'>" + lotto[0] + "</div>");
-        document.write("<div class='ball ball2'>" + lotto[1] + "</div>");
-        document.write("<div class='ball ball3'>" + lotto[2] + "</div>");
-        document.write("<div class='ball ball4'>" + lotto[3] + "</div>");
-        document.write("<div class='ball ball5'>" + lotto[4] + "</div>");
-        document.write("<div class='ball ball6'>" + lotto[5] + "</div>");
+      var content = document.getElementById("jasoseol").value;
+      document.getElementById("count").innerHTML;
     </script>
-</body>
+    <script>
+      var lotto = [];
+      while (lotto.length < 6) {
+        var num = parseInt(Math.random() * 45 + 1);
+        if (lotto.indexOf(num) == -1) {
+          lotto.push(num);
+        }
+      }
+      //정렬
+      lotto.sort((a, b) => a - b);
+      document.write("<div class='ball ball1'>" + lotto[0] + "</div>");
+      document.write("<div class='ball ball2'>" + lotto[1] + "</div>");
+      document.write("<div class='ball ball3'>" + lotto[2] + "</div>");
+      document.write("<div class='ball ball4'>" + lotto[3] + "</div>");
+      document.write("<div class='ball ball5'>" + lotto[4] + "</div>");
+      document.write("<div class='ball ball6'>" + lotto[5] + "</div>");
+    </script>
+  </body>
 </html>
